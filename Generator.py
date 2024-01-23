@@ -4,7 +4,7 @@ from torch import nn
 class Generator(nn.Module):
 
     def __init__(self, z_dim=10, im_chan=1, hidden_dim=64):
-        super(Generaror, self).__init__()
+        super(Generator, self).__init__()
         self.z_dim = z_dim
 
         self.gen = nn.Sequential(
