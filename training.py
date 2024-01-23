@@ -24,10 +24,10 @@ transform = transforms.Compose([
     transforms.Normalize((0.5,), (0.5,)),
 ])
 
-# dataloader = DataLoader(
-#     MNIST('.', download=False, transform=transform),
-#     batch_size=batch_size,
-#     shuffle=True)
+dataloader = DataLoader(
+    MNIST('.', download=False, transform=transform),
+    batch_size=batch_size,
+    shuffle=True)
 
 gen = Generator(z_dim).to(device)
 gen_opt = torch.optim.Adam(gen.parameters(), lr=lr, betas=(beta_1, beta_2))

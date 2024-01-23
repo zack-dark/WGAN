@@ -17,6 +17,6 @@ print("Success!")
 
 def get_crit_loss(crit_fake_pred, crit_real_pred, gp, c_lambda):
 
-    crit_loss = crit_fake_pred.mean() - crit_real_pred + c_lambda * gp
+    crit_loss = (crit_fake_pred.mean() - crit_real_pred + c_lambda * gp).mean()
 
     return crit_loss
